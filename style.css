@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+body {
+    background-color: black;
+}
+#text{
+  color: white;
+}
+/* .jumbotron {
+    background-color: black;
+} */
+
+.container-fluid {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: black;
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: black;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.img-responsive {
+    max-width: 100%;
+    max-height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.btn-med {
+    margin-top: 10px;
+}
+
+
+.lead {
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color:  white;
+}
+
+.rowtext {
+    color: white;
+}
+
+/*--------------------------------------------------------------
+# google slides
+--------------------------------------------------------------*/ 
+
+.googleslide {
+  margin: 0px auto;
+  overflow: hidden;
+  text-align: center;
+}
