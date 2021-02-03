@@ -1,4 +1,5 @@
-from Generator.app import app
+from __init__ import app
+import requests
 import shutil # to save it locally
 import json
 from client_id import client_id as clientID, client_secret as secret
@@ -6,6 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 from pystray import MenuItem as item
 import pystray
+print('pleaseineedhelp')
 def action():
     pass
 def create_image():
