@@ -17,6 +17,14 @@
 </head>
 
 <body>
+    <!-- Top Button -->
+    							
+	<div class="progress-wrap">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+		</svg>
+	</div>
+        
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href='/'> SpotifyCode-Overlay</a>
@@ -25,38 +33,26 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
+        
     </nav>
 
-    
     <div class ='row'>
-        <div class="col-md-1" ></div>
-        <div class="container-fluid col-md-10 text-white" >
-            <h2>Authentication Redirect</h2>
-            <p>{{ state }}</p>
-            <p>{{ code }}</p>
-            
-            <hr/>
-            
-            <footer>
-                <p>&copy; {{ year }} - SpotifyCode-Overlay</p>
-            </footer>
-            </div>
-        <div class="col-md-1"></div>
+        <div class ='col-md-2'></div>
+        <div class = 'col-md-8 justified-text-centered'>
+            <h1>Selection of features for the Spotify Code has been completed</h1>
+            <h3>Thank you.</h1>
+        </div>
+        <div class ='col-md-2'></div>
     </div>
-    
-	<script src="https://d3js.org/d3.v4.min.js"></script>
+    <footer>
+        <p>&copy; {{ year }} - SpotifyCode-Overlay</p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script> 
-        var colorPicker = new iro.ColorPicker("#picker", {
-            width: 420,
-            color: "#f00"
-        })
-        colorPicker.on('color:change', function(color){
-            // console.log(color.hexString)
-            // console.log(document.getElementById('colorhex').value)
-            document.getElementById('colorhex').value = color.hexString
-        })
-    </script>
+    
+    
+
 </body>
+
