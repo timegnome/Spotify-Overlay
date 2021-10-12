@@ -4,7 +4,7 @@ from os import environ
 from splinter import Browser
 from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
-from multiprocessing import Process
+from multiprocessing import Pool
 from forms import SubmissionForm
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
@@ -77,6 +77,7 @@ def get_permission(browser):
     req = requests.get(url,header)
     browser.visit(req.url)
 def get_tokens():
+    global OAth_tokens
     request_body = json.dumps({
         "client_id" : clientID,
         "client_secret": secret
@@ -149,6 +150,7 @@ def get_spotify_code_image(song):
         print('Image Couldn\'t be retreived')
 @app.route('/login')
 def get_login(browser):
+    global auth_info
     auth_info = request.args.get('code')
     state = request.args.get('state')
     if state != 't1i2m3e4g5n6o7m8e':
@@ -199,14 +201,23 @@ if __name__ == "__main__":
     image = create_image()
     menu = (item('Info', lambda: icon.stop()), item('Exit', lambda : endprogram(icon)))
     icon = pystray.Icon("ScO", image, "ScO Menu", menu)
-    icon.run()
+#     icon.run()
 #     Setup server thread for the local flask app
     HOST = environ.get('SERVER_HOST', 'localhost')
     try:
         PORT = int(environ.get('SERVER_PORT', '5500'))
     except ValueError:
         PORT = 5500
-    server = Process(target=app.run(HOST, PORT))
+    pool = Pool(processes=3)
+    trayicon = pool.apply_async(icon.run)
+    flaskapp = pool.apply_async(app.run, (HOST,PORT)
+    calc_res = pool.apply_async(Process3, [integer])
+
+    pool.close()
+    pool.join()
+
+    final = FinalProcess(parsed.get(), pattern.get(), calc_res.get())
+    server = Process(target=app.run, (HOST, PORT))
     server.start()
     
 #     Start browser for the request redirects and url displayed
